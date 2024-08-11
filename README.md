@@ -1,5 +1,4 @@
-# Задание для Python developer
-# IT Bootcamp Test Task Python
+# Задание для Python developer - IT Bootcamp Test Task Python
 ##            Компактный веб-сервис, позволяющий работать с авторами и книгами.
 ###            Для запуска проекта необходимо:
 
