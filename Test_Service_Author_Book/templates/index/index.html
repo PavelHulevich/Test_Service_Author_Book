@@ -1,0 +1,9 @@
+    <h1>Главное меню </h1>
+
+    <form action="{% url 'author:AuthorAllView' %}">
+        <input type="submit" value="Авторы">
+    </form>
+
+        <form action="{% url 'book:BookAllView' %}">
+        <input type="submit" value="Книги">
+    </form>

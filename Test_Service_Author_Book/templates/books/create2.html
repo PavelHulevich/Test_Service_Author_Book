@@ -1,0 +1,9 @@
+    <h1>Добавить книгу</h1>
+    <form action="{% url 'book:book_create' %}" method="post"
+        enctype="multipart/form-data">
+        {% csrf_token %}
+        <table border="3">
+        {{ form }}
+        </table>
+        <input type="submit" value="Добавить">
+    </form>

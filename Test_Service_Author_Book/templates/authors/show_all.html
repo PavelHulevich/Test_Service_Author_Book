@@ -1,0 +1,29 @@
+    <h1>Список Авторов </h1>
+    <div>===================================================</div>
+        {% for author in authors %}
+            <h3>Имя Автора: {{ author.name }}</h3>
+            <div>id автора: {{  author.id  }}</div>
+            <form action="{% url 'author:author_find_book' author.id %}" method="get">
+                {% csrf_token %}
+                <input type="submit" value="Все книги автора">
+            </form>
+            <form action="{% url 'author:author_update' author.id %}" method="get">
+                {% csrf_token %}
+                <input type="submit" value="Изменить">
+            </form>
+            <form action="{% url 'author:author_del' author.id %}" method="post">
+                {% csrf_token %}
+                <input type="submit" value="Удалить">
+            </form>
+            <div>===================================================</div>
+        {% endfor %}
+    <form action="{% url 'author:author_create' %}">
+        <input type="submit" value="Добавить автора">
+    </form>
+    <form action="{% url 'author:author_all_del' %}"  method="post">
+        {% csrf_token %}
+        <input type="submit" value="Удалить всех авторов">
+    </form>
+    <form action="{% url 'index:index_view' %}">
+        <input type="submit" value="На главную страницу">
+    </form>

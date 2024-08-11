@@ -1,0 +1,9 @@
+<h1>Поиск книг </h1>
+<form action="{% url 'book:book_find_author' %}">
+    <h3>Поиск по автору </h3>
+    <input name='find_text' type="text" placeholder="Имя автора">
+</form>
+<form action="{% url 'book:book_find_book' %}">
+    <h3>Поиск по книге </h3>
+    <input name='find_text' type="text" placeholder="Название книги">
+</form>

@@ -1,0 +1,30 @@
+    <h1>Список книг у которых автором является: {{author_name}} </h1>
+    <div>===================================================</div>
+        {% for book in books %}
+            <h3>Название книги: {{ book.title }}</h3>
+            <h3>Имя автора: {{  book.fk_book_to_author.name  }}</h3>
+            <div>id книги: {{  book.id  }}</div>
+            <div>id автора: {{  book.fk_book_to_author }}</div>
+                <form action="{% url 'book:book_update' book.id %}" method="get">
+                {% csrf_token %}
+                <input type="submit" value="Изменить">
+            </form>
+            <form action="{% url 'book:book_del' book.id %}" method="post">
+                {% csrf_token %}
+                <input type="submit" value="Удалить книгу">
+            </form>
+            <div>===================================================</div>
+        {% endfor %}
+    <form action="{% url 'book:book_find' %}">
+        <input type="submit" value="Поиск книг">
+    </form>
+    <form action="{% url 'book:book_create' %}">
+        <input type="submit" value="Добавить книгу">
+    </form>
+    <form action="{% url 'book:book_all_del' %}"  method="post">
+        {% csrf_token %}
+        <input type="submit" value="Удалить все книги">
+    </form>
+    <form action="{% url 'index:index_view' %}">
+        <input type="submit" value="На главную страницу">
+    </form>

@@ -1,0 +1,9 @@
+    <h1>Редактирование автора</h1>
+    <form action="{% url 'author:author_update' id=author_id%}" method="post"
+        enctype="multipart/form-data">
+        {% csrf_token %}
+        <table border="1">
+        {{ form }}
+        </table>
+        <input type="submit" value="Сохранить">
+    </form>
