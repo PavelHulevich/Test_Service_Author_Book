@@ -115,3 +115,6 @@ Y
 )Test_Service_Author_Book/authors/tests.py,8\b\8bd2bd4b02c08ad4394273426c93efa99fcdb65e
 Z
 *Test_Service_Author_Book/authors/models.py,e\d\edb95bbdbcc1126b4f14eb00b145ec30bb4ff517
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
