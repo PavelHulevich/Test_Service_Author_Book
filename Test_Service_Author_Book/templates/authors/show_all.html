@@ -1,8 +1,7 @@
     <h1>Список Авторов </h1>
     <div>===================================================</div>
         {% for author in authors %}
-            <h3>Имя Автора: {{ author.name }}</h3>
-            <div>id автора: {{  author.id  }}</div>
+            <h3>Имя Автора: {{ author }}</h3>
             <form action="{% url 'author:author_find_book' author.id %}" method="get">
                 {% csrf_token %}
                 <input type="submit" value="Все книги автора">

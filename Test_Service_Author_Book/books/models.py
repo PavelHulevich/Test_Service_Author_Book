@@ -6,3 +6,6 @@ class Book(models.Model):
     objects = None
     title = models.CharField(max_length=35, unique=True)
     fk_book_to_author = models.ForeignKey(Author, default=0, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.title

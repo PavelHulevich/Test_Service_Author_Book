@@ -1,10 +1,8 @@
     <h1>Список книг у которых автором является: {{author_name}} </h1>
     <div>===================================================</div>
         {% for book in books %}
-            <h3>Название книги: {{ book.title }}</h3>
-            <h3>Имя автора: {{  book.fk_book_to_author.name  }}</h3>
-            <div>id книги: {{  book.id  }}</div>
-            <div>id автора: {{  book.fk_book_to_author }}</div>
+            <h3>Название книги: {{ book }}</h3>
+            <h3>Имя автора: {{  book.fk_book_to_author  }}</h3>
                 <form action="{% url 'book:book_update' book.id %}" method="get">
                 {% csrf_token %}
                 <input type="submit" value="Изменить">
