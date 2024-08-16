@@ -76,11 +76,11 @@ WSGI_APPLICATION = 'Test_Service_Author_Book.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-
+DATABASES = {   # version = 0.1.1 - используемая база данных изменена c postgresql-16 на sql3
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+
         # 'ENGINE': 'django.db.backends.postgresql',
         # 'NAME': 'author_book',
         # 'USER': 'postgres',
